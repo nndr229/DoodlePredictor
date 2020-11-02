@@ -15,12 +15,7 @@ class Matrix:
 			for j in range(self.cols):
 				inner_row.append(0)
 
-	# def __repr__(self):
-	# 	return f"The matrix has {self.rows} rows  and {self.cols} columns"
-	# 	if self.rows > 0 and self.cols > 0:
-	# 		for i in range(len(self.data)):
-	# 			print(self.data[i])
-	# 		print()
+	
 
 	def get_matrix(self):
 		if self.rows > 0 and self.cols > 0:
@@ -129,55 +124,3 @@ def double(*args):
 		return 2*arg
 
 
-
-# arr=[0.07784910804854898
-# , 0.12714684771058138
-# , 0.14475653622995846]
-# m=Matrix.fromArray(arr)
-# arr2=[0.914910703587472]
-# n=Matrix.fromArray(arr2)
-
-# m.scalar_multiply(n)
-# m = Matrix(2, 3)
-# # print(m)
-# m.get_matrix()
-
-# m.randomize()
-# m.get_matrix()
-# print("transpose")
-# a = Matrix.transpose(m)
-# a.get_matrix()
-# # # print(np.transpose(m.data))
-
-
-
-# # m.map(double)
-# # m.get_matrix()
-
-
-# n = Matrix(2, 3)
-# n.randomize()
-# n.get_matrix()
-
-# result = Matrix.subtract(m,n)
-# result.get_matrix()
-
-
-
-# result =Matrix.multiply(m,n)
-# result.get_matrix()
-
-# a = np.array([m.data])
-# b = np.array([n.data])
-
-# print(a.dot(b))
-
-# [38, 62]
-# [107, 47]
-
-
-# [0.07784910804854898]
-# [0.12714684771058138]
-# [0.14475653622995846]
-
-# [[0.914910703587472]]

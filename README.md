@@ -42,9 +42,24 @@ Launch the drawing app to test your model.
 python -m src.doodle_predictor gui --model my_model.pkl
 ```
 
+## Advanced Features
+
+### Pure Python Mode (Educational)
+By default, Doodle Predictor uses NumPy for performance. However, for educational purposes, it includes a pure Python `Matrix` implementation (slow but easy to study).
+
+To enable it, set `USE_NUMPY=false`:
+
+```bash
+USE_NUMPY=false python -m src.doodle_predictor train --data data/ --epochs 1
+```
+
+This is approximately 100x slower but demonstrates how Neural Networks work without libraries.
+
 ## Structure
 
-*   `src/doodle_predictor/network.py`: The core Neural Network logic (Feed Forward + Backprop).
+*   `src/doodle_predictor/network.py`: The dispatcher (chooses between NumPy/Pure).
+*   `src/doodle_predictor/network_numpy.py`: Fast implementation.
+*   `src/doodle_predictor/network_pure.py`: Pure Python implementation using `matrix.py`.
 *   `src/doodle_predictor/trainer.py`: Training loop and evaluation.
 *   `src/doodle_predictor/data.py`: Data loading and preprocessing.
 *   `src/doodle_predictor/gui.py`: The drawing interface.
